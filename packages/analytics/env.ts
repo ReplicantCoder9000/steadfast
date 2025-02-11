@@ -3,8 +3,8 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    OPENPANEL_CLIENT_ID: z.string(),
-    OPENPANEL_CLIENT_SECRET: z.string(),
+    OPENPANEL_CLIENT_ID: z.string().optional(),
+    OPENPANEL_CLIENT_SECRET: z.string().optional(),
   },
   runtimeEnv: {
     OPENPANEL_CLIENT_ID: process.env.OPENPANEL_CLIENT_ID,
