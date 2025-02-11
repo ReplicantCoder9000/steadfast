@@ -12,6 +12,15 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    webpackCache: {
+      type: "filesystem",
+      buildDependencies: {
+        config: [__filename],
+      },
+      compression: "gzip",
+    },
+  },
   transpilePackages: ["@openstatus/ui", "@openstatus/api"],
   outputFileTracingIncludes: {
     "/": [
@@ -21,6 +30,10 @@ const nextConfig = {
   },
   serverExternalPackages: ["@google-cloud/tasks"],
   expireTime: 180, // 3 minutes
+  serverRuntimeConfig: {
+    // Force Node.js runtime for all API routes
+    runtime: 'nodejs',
+  },
   logging: {
     fetches: {
       fullUrl: true,
