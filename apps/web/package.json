@@ -1,5 +1,5 @@
 {
-  "name": "@openstatus/web",
+  "name": "@steadfast/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,6 @@
     "@google-cloud/tasks": "4.0.1",
     "@hookform/resolvers": "3.9.1",
     "@libsql/client": "0.14.0",
-    "@openstatus/analytics": "workspace:*",
     "@openstatus/api": "workspace:*",
     "@openstatus/assertions": "workspace:*",
     "@openstatus/db": "workspace:*",

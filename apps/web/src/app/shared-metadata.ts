@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-export const TITLE = "OpenStatus";
+export const TITLE = "Steadfast";
 export const DESCRIPTION =
-  "A better way to monitor your API and your website. Don't let downtime or a slow response time ruin your user experience. Try the open-source synthetic monitoring platform for free!";
+  "Enterprise-grade synthetic monitoring platform for modern businesses. Monitor your websites and APIs from 35 global regions, with advanced status pages, team collaboration, and comprehensive alerting features.";
 
 export const defaultMetadata: Metadata = {
   title: {
@@ -10,7 +10,7 @@ export const defaultMetadata: Metadata = {
     default: TITLE,
   },
   description: DESCRIPTION,
-  metadataBase: new URL("https://www.openstatus.dev"),
+  metadataBase: new URL("https://steadfast.dev"), // This URL should be updated to your actual domain
 };
 
 export const twitterMetadata: Metadata["twitter"] = {

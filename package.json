@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "steadfast",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -25,7 +26,6 @@
   "pnpm": {
     "onlyBuiltDependencies": ["@swc/core", "sharp"]
   },
-  "name": "openstatus",
   "workspaces": [
     "apps/*",
     "packages/*",

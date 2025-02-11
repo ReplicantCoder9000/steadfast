@@ -1,7 +1,7 @@
 import type { DefaultSession } from "next-auth";
 import NextAuth from "next-auth";
 
-import { Events, setupAnalytics } from "@openstatus/analytics";
+import { Events, setupAnalytics } from "../analytics";
 import { db, eq } from "@openstatus/db";
 import { user } from "@openstatus/db/src/schema";
 

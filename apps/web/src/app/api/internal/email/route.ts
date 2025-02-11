@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import { and, gte, lte } from "@openstatus/db";
 import { db } from "@openstatus/db/src/db";
 import { user } from "@openstatus/db/src/schema";
+import { Events, setupAnalytics } from "@/lib/analytics";
 import { FollowUpEmail, sendEmail } from "@openstatus/emails";
 
 export async function GET(request: NextRequest) {

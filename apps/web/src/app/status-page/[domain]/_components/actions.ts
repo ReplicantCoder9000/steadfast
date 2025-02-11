@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 
-import { Events, setupAnalytics } from "@openstatus/analytics";
+import { Events, setupAnalytics } from "@/lib/analytics";
 import { and, eq, sql } from "@openstatus/db";
 import { db } from "@openstatus/db/src/db";
 import { page, pageSubscriber } from "@openstatus/db/src/schema";

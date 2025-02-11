@@ -1,103 +1,60 @@
 <p align="center" style="margin-top: 120px">
 
-  <h3 align="center">OpenStatus</h3>
+  <h3 align="center">Steadfast</h3>
 
-  <p align="center">
-  <a href="https://status.openstatus.dev">
-  <img src='https://status.openstatus.dev/badge'>
-  </a>
-  </p>
-
-  <p align="center">The Open-Source synthetic monitoring platform.
-    <br />
-    <a href="https://www.openstatus.dev"><strong>Learn more »</strong></a>
+  <p align="center">The enterprise-grade synthetic monitoring platform.
     <br />
     <br />
-    <a href="https://www.openstatus.dev/discord">Discord</a>
-    ·
-    <a href="https://www.openstatus.dev">Website</a>
-    ·
-    <a href="https://github.com/openstatushq/openstatus/issues">Issues</a>
+    Comprehensive monitoring, status pages, and alerting for modern businesses.
   </p>
 </p>
 
-## About OpenStatus 🏓
+## About Steadfast 🚀
 
-OpenStatus is open-source synthetic monitoring monitoring platform.
+Steadfast is a powerful synthetic monitoring platform designed for businesses that need reliable, scalable monitoring solutions.
 
-- **Synthetic monitoring**: Monitor your website and APIs globally and receive
-  notifications when they are down or slow.
+- **Global Synthetic Monitoring**: Monitor your websites and APIs from 35 regions worldwide
+- **Advanced Status Pages**: Customizable, white-label status pages with subscriber management
+- **Team Collaboration**: Built for teams with robust access controls and permissions
+- **Enterprise-Ready**: SAML SSO, audit logs, and advanced security features
 
-## Recognitions 🏆
+## Features 💡
 
-<a href="https://trendshift.io/repositories/1780" target="_blank"><img src="https://trendshift.io/api/badge/repositories/1780" alt="openstatusHQ%2Fopenstatus | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+- **Comprehensive Monitoring**
+  - Multi-region monitoring with 30-second frequency
+  - Screenshot capture on failures
+  - OpenTelemetry integration
+  - Private location support
 
-<a href="https://news.ycombinator.com/item?id=37740870">
-  <img
-    alt="Featured on Hacker News"
-    src="https://hackerbadge.now.sh/api?id=37740870"
-    style="width: 250px; height: 55px;" width="250" height="55"
-  />
-</a>
+- **Professional Status Pages**
+  - Custom domain support
+  - White label options
+  - Subscriber management
+  - Maintenance windows
 
-## Contact us 💌
+- **Team-Focused**
+  - Role-based access control
+  - Collaborative incident management
+  - Audit logging
+  - Team-based billing
 
-If you are interested in our enterprise plan or need special features, please
-email us at [ping@openstatus.dev](mailto:ping@openstatus.dev) or book a
-call<br/><br/>
-<a href="https://cal.com/team/openstatus/30min"><img alt="Book us with Cal.com" src="https://cal.com/book-with-cal-dark.svg" /></a>
+- **Advanced Alerting**
+  - Multi-channel notifications
+  - Custom alert rules
+  - Integrations with Slack, Discord, Email, SMS, and PagerDuty
+  - Escalation policies
 
-## Roadmap 🗺️
-
-Here's our [roadmap](https://openstatus.productlane.com/roadmap) feel free to
-contribute to it.
-
-## Contributing 🤝
-
-If you want to help us building the best status page and alerting system, you
-can check our
-[contributing guidelines](https://github.com/openstatusHQ/openstatus/blob/main/CONTRIBUTING.MD)
-
-### Top Contributors
-
-<a href="https://github.com/openstatushq/openstatus/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=openstatushq/openstatus" />
-</a>
-
-Made with [Contrib.rocks](https://contrib.rocks)
-
-### Stats
-
-![Alt](https://repobeats.axiom.co/api/embed/180eee159c0128f683a30f15f51ac35bdbd9fa44.svg "Repobeats analytics image")
-
-## Tech stack 🥞
+## Tech Stack 🛠
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/)
-- [tinybird](https://tinybird.co/?ref=openstatus.dev)
+- [tinybird](https://tinybird.co/)
 - [turso](https://turso.tech/)
 - [drizzle](https://orm.drizzle.team/)
 - [Resend](https://resend.com/)
 
-[![Built with Depot](https://depot.dev/badges/built-with-depot.svg)](https://depot.dev/?utm_source=Opource=OpenStatus)
-
-## Getting Started 🚀
-
-### With Devbox
-
-You can use [Devbox](https://www.jetify.com/devbox/) and get started with the following commands:
-
-1. Install Devbox
-    ```sh
-    curl -fsSL https://get.jetify.com/devbox | bash
-    ```
-2. Install project dependencies, build and start services
-    ```sh
-    devbox services up
-    ```
-
-Alternatively, follow the instructions below.
+## Getting Started 🏃
 
 ### Requirements
 
@@ -108,45 +65,73 @@ Alternatively, follow the instructions below.
 
 ### Setup
 
-1. Clone the repository
+1. Clone the repository and install dependencies:
 
 ```sh
-git clone https://github.com/openstatushq/openstatus.git
-```
-
-2. Install dependencies
-
-```sh
+git clone [your-repo-url]
+cd steadfast
 pnpm install
 ```
 
-3. Initialize the development environment
+2. Initialize the development environment:
 
-Launch the database in one terminal:
-
+Launch the database:
 ```sh
-turso dev --db-file openstatus-dev.db
+turso dev --db-file steadfast-dev.db
 ```
 
-In another terminal, run the following command:
-
+In another terminal:
 ```sh
 pnpm dx
 ```
 
-4. Launch the web app
-
+3. Launch the web app:
 ```sh
 pnpm dev:web
 ```
 
-5. See the results:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-- open [http://localhost:3000](http://localhost:3000) for the web app
+## Environment Variables
 
-### Videos
+Create a `.env` file in the root directory with the following variables:
 
-Videos to better understand the OpenStatus codebase:
+```env
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
 
-- [The code behind OpenStatus and how it uses Turbopack](https://youtube.com/watch?v=PYfSJATE8v8).
-- [Drop Betterstack and go open source](https://www.youtube.com/watch?v=PKag0USy3eQ)
+# Stripe (for billing)
+STRIPE_SECRET_KEY=your_stripe_secret_key
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+
+# Additional configurations as needed
+```
+
+## Documentation
+
+For detailed documentation about setup, configuration, and usage, please refer to our documentation site.
+
+## Deployment 🚀
+
+### DigitalOcean App Platform Configuration
+
+For testing/development deployment:
+
+1. Environment Setup
+   - Set `NODE_ENV=development` to:
+     - Skip email functionality (no Resend API key needed)
+     - Disable analytics tracking
+     - Enable development mode features
+
+2. Runtime Configuration
+   - Using Node.js runtime for all API routes
+   - Webpack cache optimization enabled
+   - Edge runtime disabled for better compatibility
+
+3. Disabled Features in Development
+   - Email notifications (welcome emails, status updates)
+   - Analytics tracking
+   - User behavior monitoring
+
+Note: This configuration is for testing purposes only. For production deployment, additional environment variables and service configurations will be required.
